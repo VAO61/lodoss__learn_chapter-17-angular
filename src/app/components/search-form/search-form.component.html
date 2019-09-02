@@ -11,17 +11,29 @@ https://material.angular.io/components/categories/forms
       <mat-option value="Repositories">Repositories</mat-option>
     </mat-select>
   </mat-form-field> -->
-  <div class="search__item">
+  <!-- <div class="search__item">
     <select [(ngModel)]="language">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
     </select>
-  </div>
-  <div class="repoBlock" *ngFor="let item of this.dataService.items">
+  </div> -->
+  <!-- <mat-form-field class="repoBlock" *ngFor="let item of this.dataService.items">
+    <mat-label>Language</mat-label>
     {{ item.label }}
-  </div>
+    <mat-select [(value)]="Repositories">
+  </mat-form-field> -->
+  <mat-form-field class="search__item">
+    <mat-label>Language</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option
+        value="{{ item.value }}"
+        *ngFor="let item of this.dataService.items"
+        >{{ item.label }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
 
   <!-- </div> -->
   <!-- <div class="search__item"> -->
