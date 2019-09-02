@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
+import { FormsModule } from '@angular/forms';
+
 // material.angular
 import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,6 +45,7 @@ const routes = [
     AppRoutingModule,
     HttpClientModule,
     AngularSvgIconModule,
+    FormsModule,
 
     // material.angular
     MatSelectModule,
