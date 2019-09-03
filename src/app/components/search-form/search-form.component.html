@@ -2,42 +2,48 @@
 https://material.angular.io/components/categories/forms
 -->
 
-<!-- <div class="search__item"> -->
-
 <section class="search container">
   <mat-form-field class="search__item">
     <mat-label>Type</mat-label>
-    <mat-select [(value)]="Repositories">
-      <mat-option value="Repositories">Repositories</mat-option>
+    <mat-select
+      [(ngModel)]="selectedType"
+      (ngModelChange)="dataService.typeValue($event)"
+    >
+      <mat-option
+        value="{{ t.value }}"
+        *ngFor="let t of this.dataService.types"
+        >{{ t.value }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
 
   <mat-form-field class="search__item">
     <mat-label>Language</mat-label>
-    <mat-select [(value)]="selected">
-      <mat-option value="Javascript">Javascript</mat-option>
-      <mat-option value="CSS">CSS</mat-option>
-      <mat-option value="HTML">HTML</mat-option>
-      <mat-option value="PHP">PHP</mat-option>
-      <mat-option value="Ruby">Ruby</mat-option>
-      <mat-option value="C++">C++</mat-option>
-      <mat-option value="Python">Python</mat-option>
-      <mat-option value="C#">C#</mat-option>
-      <mat-option value="Java">Java</mat-option>
-      <mat-option value="Go">Go</mat-option>
-      <mat-option value="Haskel">Haskel</mat-option>
+    <mat-select
+      [(ngModel)]="selectedLanguage"
+      (ngModelChange)="dataService.languageValue($event)"
+    >
+      <mat-option
+        value="{{ l.value }}"
+        *ngFor="let l of this.dataService.languages"
+        >{{ l.value }}</mat-option
+      >
     </mat-select>
   </mat-form-field>
-  <!-- </div> -->
-  <!-- <div class="search__item"> -->
-  <!-- <form class="example-form"> -->
-  <mat-form-field class="search__item">
-    <input matInput placeholder="Type here for search" />
+
+  <mat-form-field class="search__item search__input">
+    <input
+      matInput
+      placeholder="Type here for search"
+      (keyup)="dataService.inputChanged($event)"
+    />
   </mat-form-field>
+
+  <!-- (ngSubmit)="onSubmit()" -->
   <button
     class="search__submit btn btn_brand"
-    disabled="{isDisableSearch}"
-    onClick="{handleClickSearch}"
+    (click)="dataService.findRepos()"
+    [disabled]="dataService.isDisableSearch()"
   >
     search
   </button>
