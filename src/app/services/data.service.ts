@@ -24,8 +24,6 @@ export class DataService {
     { value: 'Haskel' }
   ];
 
-  // const isDisableSearch = type === '' || lang === '' || searchValue === '';
-
   // findRepo() {
   //   console.log('object');
   // }
@@ -35,7 +33,7 @@ export class DataService {
       throw new Error(`
         Incorrect request!
         One or more fields is not selected.
-      `);
+        `);
     }
     const response = await axios.get(
       `https://api.github.com/search/${this.type}?q=${this.inputValue}+language:${this.language}&sort=stars&order=desc`,
@@ -56,24 +54,14 @@ export class DataService {
     this.language = language;
   }
 
+  isDisableSearch = () =>
+    this.type === '' || this.language === '' || this.inputValue === '';
+
   inputChanged(event) {
     this.inputValue = event.target.value;
-    // console.log('aaaaa');
+
+    if (event.which === 13 && !this.isDisableSearch()) {
+      this.findRepos();
+    }
   }
-
-  // findRepos(language);
-  // async findRepos(type, searchValue, lang) {
-  //   const response = await axios.get(
-  //     `https://api.github.com/search/${type.toLowerCase()}?q=${searchValue}+language:${lang}&sort=stars&order=desc`,
-  //     {
-  //       headers: { Accept: 'application/vnd.github.mercy-preview+json' }
-  //     }
-  //   );
-  //   return response;
-  // }
-
-  // if (!type || !searchValue || !lang) {
-  //   throw new Error('Some Error text');
-  // }
 }
-// export default getData;

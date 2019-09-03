@@ -43,9 +43,8 @@ https://material.angular.io/components/categories/forms
   <button
     class="search__submit btn btn_brand"
     (click)="dataService.findRepos()"
+    [disabled]="dataService.isDisableSearch()"
   >
-    <!-- disabled="{isDisableSearch}" -->
-    <!-- onClick="{handleClickSearch}" -->
     search
   </button>
 </section>
