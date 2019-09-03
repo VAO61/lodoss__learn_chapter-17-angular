@@ -1,3 +1,6 @@
 <!-- <h1>Page "Search"</h1> -->
 <app-search-form></app-search-form>
-<app-no-result-found class="container no-result-found"></app-no-result-found>
+<app-no-result-found
+  *ngIf="!dataService.searchList.length"
+  class="container no-result-found"
+></app-no-result-found>

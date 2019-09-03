@@ -7,11 +7,11 @@ https://material.angular.io/components/categories/forms
     <mat-label>Type</mat-label>
     <mat-select
       [(ngModel)]="selectedType"
-      (ngModelChange)="dataService.typeValue($event)"
+      (ngModelChange)="getDataService.typeValue($event)"
     >
       <mat-option
         value="{{ t.value }}"
-        *ngFor="let t of this.dataService.types"
+        *ngFor="let t of this.getDataService.types"
         >{{ t.value }}</mat-option
       >
     </mat-select>
@@ -21,11 +21,11 @@ https://material.angular.io/components/categories/forms
     <mat-label>Language</mat-label>
     <mat-select
       [(ngModel)]="selectedLanguage"
-      (ngModelChange)="dataService.languageValue($event)"
+      (ngModelChange)="getDataService.languageValue($event)"
     >
       <mat-option
         value="{{ l.value }}"
-        *ngFor="let l of this.dataService.languages"
+        *ngFor="let l of this.getDataService.languages"
         >{{ l.value }}</mat-option
       >
     </mat-select>
@@ -35,15 +35,15 @@ https://material.angular.io/components/categories/forms
     <input
       matInput
       placeholder="Type here for search"
-      (keyup)="dataService.inputChanged($event)"
+      (keyup)="getDataService.inputChanged($event)"
     />
   </mat-form-field>
 
   <!-- (ngSubmit)="onSubmit()" -->
   <button
     class="search__submit btn btn_brand"
-    (click)="dataService.findRepos()"
-    [disabled]="dataService.isDisableSearch()"
+    (click)="getDataService.findRepos()"
+    [disabled]="getDataService.isDisableSearch()"
   >
     search
   </button>
