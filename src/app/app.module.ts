@@ -24,6 +24,7 @@ import { MyListPageComponent } from './pages/my-list-page/my-list-page.component
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
+import { ResultTileComponent } from './components/result-tile/result-tile.component';
 
 const routes = [
   { path: '', component: SearchPageComponent },
@@ -40,7 +41,8 @@ const routes = [
     MyListPageComponent,
     SearchPageComponent,
     SearchFormComponent,
-    ResultListComponent
+    ResultListComponent,
+    ResultTileComponent
   ],
   imports: [
     BrowserModule,

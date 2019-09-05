@@ -1,38 +1,5 @@
 <main class="___">
   <section class="result-list" *ngFor="let item of this.dataService.searchList">
-    <div class="result-list__result result"></div>
-    <div class="result__add-remove">
-      <!-- <Checkbox active={isExists} onClick={isExists ? removeFromMyList(item.id) : addToMyList(item)} /> -->
-    </div>
-    <div class="result__main">
-      <p class="result__title">
-        <a href="{item.html_url}" class="lnk result__link">
-          {{ item.full_name }}
-        </a>
-      </p>
-      <p class="result__desc">
-        {{ item.description }}
-      </p>
-
-      <!-- <div class="result__tags">
-          {item.topics &&
-          item.topics.map(tag => (
-          <span class="result__tag">
-            {tag}
-          </span>
-          ))}
-        </div> -->
-    </div>
-    <div class="result__details result-details">
-      <p class="result-details__language">
-        {{ item.language }}
-      </p>
-      <div class="result-details__stars-container">
-        <!-- <img class="result-details__icon" src={IconStar} alt="icon star" /> -->
-        <p class="result-details__count">
-          {{ item.stargazers_count }}
-        </p>
-      </div>
-    </div>
+    <app-result-tile [data]="item"></app-result-tile>
   </section>
 </main>
