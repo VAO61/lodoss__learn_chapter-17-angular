@@ -36,7 +36,7 @@ export class GetDataService {
 
     axios
       .get(
-        `https://api.github.com/search/${this.type}?q=${this.inputValue}+language:${this.language}&sort=stars&order=desc`,
+        `https://api.github.com/search/${this.type}?q=${this.inputValue}+language:${this.language}&sort=stars&order=desc&per_page=6`,
         {
           headers: { Accept: 'application/vnd.github.mercy-preview+json' }
         }
@@ -78,9 +78,10 @@ export class GetDataService {
     this.inputValue = event.target.value;
 
     if (event.which === 13 && !this.isDisableSearch()) {
-      this.findRepos$();
+      this.pullRepos();
     }
   }
+
   pullRepos() {
     this.findRepos$.subscribe(data => {
       this.dataService.searchList = data.map(item => {
