@@ -23,6 +23,7 @@ import { NoResultFoundComponent } from './components/no-result-found/no-result-f
 import { MyListPageComponent } from './pages/my-list-page/my-list-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
+import { ResultListComponent } from './components/result-list/result-list.component';
 
 const routes = [
   { path: '', component: SearchPageComponent },
@@ -38,7 +39,8 @@ const routes = [
     NoResultFoundComponent,
     MyListPageComponent,
     SearchPageComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    ResultListComponent
   ],
   imports: [
     BrowserModule,

@@ -45,24 +45,6 @@ export class GetDataService {
       .then(data => observer.next(data));
   });
 
-  // async findRepos() {
-  //   if (!this.type || !this.inputValue || !this.language) {
-  //     throw new Error(`
-  //       Incorrect request!
-  //       One or more fields is not selected.
-  //       `);
-  //   }
-  //   const response = await axios.get(
-  //     `https://api.github.com/search/${this.type}?q=${this.inputValue}+language:${this.language}&sort=stars&order=desc`,
-  //     {
-  //       headers: { Accept: 'application/vnd.github.mercy-preview+json' }
-  //     }
-  //   );
-  //   console.log(response.data.items);
-  //   console.log(`${this.type}, ${this.inputValue}, ${this.language}`);
-  //   return response;
-  // }
-
   typeValue(type) {
     this.type = type.toLowerCase();
   }
