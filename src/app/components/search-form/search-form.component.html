@@ -42,7 +42,7 @@ https://material.angular.io/components/categories/forms
   <!-- (ngSubmit)="onSubmit()" -->
   <button
     class="search__submit btn btn_brand"
-    (click)="getDataService.findRepos()"
+    (click)="getDataService.pullRepos()"
     [disabled]="getDataService.isDisableSearch()"
   >
     search
