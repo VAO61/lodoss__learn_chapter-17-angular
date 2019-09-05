@@ -507,5 +507,10 @@ export class DataService {
   ];
 
   themeTile = false;
+
+  toggleTheme() {
+    this.themeTile = !this.themeTile;
+    console.log(this.themeTile);
+  }
   // theme: 'result-tile';
 }

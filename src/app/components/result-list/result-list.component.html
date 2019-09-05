@@ -1,5 +1,6 @@
 <main class="">
   <!-- <section class="result-list" *ngFor="let item of this.dataService.searchList"> -->
+  <div>{{ this.dataService.themeTile }}</div>
   <section class="result-list container" *ngIf="!dataService.themeTile">
     <app-result
       [data]="item"

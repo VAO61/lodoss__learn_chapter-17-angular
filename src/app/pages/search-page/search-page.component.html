@@ -3,6 +3,9 @@
   *ngIf="!dataService.searchList.length"
   class="container no-result-found"
 ></app-no-result-found>
+<app-result-list-control
+  *ngIf="dataService.searchList.length"
+></app-result-list-control>
 <app-result-list *ngIf="dataService.searchList.length"></app-result-list>
 
 <!-- Чтобы не создавались лишние контейнеры. Angular, ты не перестаёшь бесить! -->
