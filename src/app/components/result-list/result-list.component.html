@@ -1,5 +1,10 @@
-<main class="___">
-  <section class="result-list" *ngFor="let item of this.dataService.searchList">
-    <app-result-tile [data]="item"></app-result-tile>
+<main class="">
+  <!-- <section class="result-list" *ngFor="let item of this.dataService.searchList"> -->
+  <section class="result-list container">
+    <app-result-tile
+      [data]="item"
+      *ngFor="let item of this.dataService.searchList"
+      class="result-list__result-tile "
+    ></app-result-tile>
   </section>
 </main>
