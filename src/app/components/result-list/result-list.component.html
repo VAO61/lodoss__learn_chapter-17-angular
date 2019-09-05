@@ -1,10 +1,19 @@
 <main class="">
   <!-- <section class="result-list" *ngFor="let item of this.dataService.searchList"> -->
-  <section class="result-list container">
+  <section class="result-list container" *ngIf="!dataService.themeTile">
+    <app-result
+      [data]="item"
+      class="result-list__result"
+      *ngFor="let item of this.dataService.myList"
+    ></app-result>
+  </section>
+  <section class="result-list container" *ngIf="!!dataService.themeTile">
     <app-result-tile
       [data]="item"
-      *ngFor="let item of this.dataService.searchList"
-      class="result-list__result-tile "
+      class="result-list__result-tile"
+      *ngFor="let item of this.dataService.myList"
     ></app-result-tile>
   </section>
 </main>
+<!-- *ngIf="!this.dataService.theme === 'result'" -->
+<!-- *ngFor="let item of this.dataService.myList" -->

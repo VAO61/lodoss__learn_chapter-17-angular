@@ -13,6 +13,16 @@
     padding-bottom: 60px;
   }
 
+  &__result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $color-text_bright;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    width: 100%;
+  }
+
   &__result-tile {
     flex-basis: calc(50% - 15px);
     min-width: calc(50% - 15px);

@@ -505,4 +505,7 @@ export class DataService {
       score: 41.406708
     }
   ];
+
+  themeTile = false;
+  // theme: 'result-tile';
 }

@@ -1,0 +1,36 @@
+<div class="result__add-remove">
+  <!-- <btn active={{isExists}} onClick={{isExists ? removeFromMyList(item.id) : addToMyList(item)}} /> -->
+  <button class="btn checkbox"></button>
+  <button class="btn checkbox checkbox_active"></button>
+</div>
+<div class="result__main">
+  <p class="result__title">
+    <a href="{{ item.html_url }}" class="lnk result__link">
+      {{ item.full_name }}
+    </a>
+  </p>
+  <p class="result__desc">
+    {{ item.description }}
+  </p>
+  <div class="result__tags">
+    <span class="result__tag" *ngFor="let tag of item.topics">
+      {{ tag }}
+    </span>
+  </div>
+</div>
+<div class="result__details result-details">
+  <p class="result-details__language">
+    {{ item.language }}
+  </p>
+  <div class="result-details__stars-container">
+    <svg-icon
+      class="result-details__icon"
+      src="../../assets/img/icon-star.svg"
+      class="header__logo"
+    ></svg-icon>
+    <p class="result-details__count">
+      asd
+      {{ item.stargazers_count }}
+    </p>
+  </div>
+</div>

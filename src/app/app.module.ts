@@ -25,6 +25,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
 import { ResultTileComponent } from './components/result-tile/result-tile.component';
+import { ResultComponent } from './components/result/result.component';
 
 const routes = [
   { path: '', component: SearchPageComponent },
@@ -42,7 +43,8 @@ const routes = [
     SearchPageComponent,
     SearchFormComponent,
     ResultListComponent,
-    ResultTileComponent
+    ResultTileComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
