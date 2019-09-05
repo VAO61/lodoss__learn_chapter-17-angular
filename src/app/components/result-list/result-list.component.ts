@@ -7,7 +7,9 @@ import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-result-list',
   templateUrl: './result-list.component.html',
-  styleUrls: ['./result-list.component.scss']
+  styleUrls: ['./result-list.component.scss'],
+  providers: [DataService]
+
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ResultListComponent implements OnInit {
