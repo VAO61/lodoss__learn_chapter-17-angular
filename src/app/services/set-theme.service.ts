@@ -14,6 +14,6 @@ export class SetThemeService {
     // )).disabled = true;
 
     this.themeTile = !this.themeTile;
-    console.log(this.themeTile);
+    // console.log(this.themeTile);
   }
 }

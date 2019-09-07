@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-result',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./result.component.scss']
 })
 export class ResultComponent implements OnInit {
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
   @Input() data;
   item = [];
