@@ -10,5 +10,6 @@ export class DataService {
   addRemoveRepo(item) {
     this.myList.push(item);
     console.log(item);
+    console.log(this.myList);
   }
 }
