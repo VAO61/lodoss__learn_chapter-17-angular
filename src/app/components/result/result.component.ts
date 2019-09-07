@@ -9,11 +9,11 @@ import { DataService } from '../../services/data.service';
 export class ResultComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
-  @Input() data;
+  @Input() repo;
   item = [];
 
   ngOnInit() {
-    this.item = this.data;
+    this.item = this.repo;
     // console.log(this.item);
   }
 }

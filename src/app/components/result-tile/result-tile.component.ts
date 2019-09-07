@@ -8,11 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ResultTileComponent implements OnInit {
   constructor() {}
 
-  @Input() data;
+  @Input() repo;
   item = [];
 
   ngOnInit() {
-    this.item = this.data;
+    this.item = this.repo;
     // console.log(this.item);
   }
 }
