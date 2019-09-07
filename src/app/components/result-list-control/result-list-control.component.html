@@ -1,19 +1,22 @@
 <section class="result-list-control container">
-  <button class="btn result-list-control__item">
+  <button
+    [ngClass]="
+      this.setThemeService.themeTile
+        ? 'btn result-list-control__item result-list-control__item_active'
+        : 'btn result-list-control__item'
+    "
+    (click)="this.setThemeService.toggleTheme()"
+  >
     <svg-icon src="../../assets/img/icon-tile.svg"></svg-icon>
   </button>
   <button
-    class="btn result-list-control__item_active"
+    [ngClass]="
+      this.setThemeService.themeTile
+        ? 'btn result-list-control__item'
+        : 'btn result-list-control__item result-list-control__item_active'
+    "
     (click)="this.setThemeService.toggleTheme()"
   >
     <svg-icon src="../../assets/img/icon-list.svg"></svg-icon>
   </button>
 </section>
-<!-- <section class="result-list-control container">
-  <button active={theme==='tile' } onClick={setTheme('tile')}>
-    <img src={IconTile} alt="icon tile" />
-  </button>
-  <button active={theme==='list' } onClick={setTheme('list')}>
-    <img src={IconList} alt="icon list" />
-  </button>
-</section> -->

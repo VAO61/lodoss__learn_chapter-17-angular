@@ -18,6 +18,7 @@
     }
 
     &_active {
+      cursor: default;
       opacity: 1;
       transition: opacity $time;
     }

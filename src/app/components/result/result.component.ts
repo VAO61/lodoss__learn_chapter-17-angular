@@ -13,6 +13,6 @@ export class ResultComponent implements OnInit {
 
   ngOnInit() {
     this.item = this.data;
-    console.log(this.item);
+    // console.log(this.item);
   }
 }
