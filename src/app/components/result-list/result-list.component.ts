@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Injectable } from '@angular/core';
 
-import { DataService } from '../../services/data.service';
+// import { DataService } from '../../services/data.service';
 import { SetThemeService } from '../../services/set-theme.service';
 
 @Injectable({
@@ -17,9 +17,12 @@ import { SetThemeService } from '../../services/set-theme.service';
 })
 export class ResultListComponent implements OnInit {
   constructor(
-    private dataService: DataService,
+    // private dataService: DataService,
     private setThemeService: SetThemeService
   ) {}
+
+  @Input() repos;
+  // items = [];
 
   ngOnInit() {}
 }

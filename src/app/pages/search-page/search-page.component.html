@@ -6,7 +6,10 @@
 <app-result-list-control
   *ngIf="this.dataService.searchList.length"
 ></app-result-list-control>
-<app-result-list *ngIf="this.dataService.searchList.length"></app-result-list>
+<app-result-list
+  *ngIf="this.dataService.searchList.length"
+  [repos]="this.dataService.searchList"
+></app-result-list>
 
 <!-- Чтобы не создавались лишние контейнеры. Angular, ты не перестаёшь бесить! -->
 

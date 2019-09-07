@@ -7,7 +7,7 @@
     <app-result
       [repo]="item"
       class="result-list__result"
-      *ngFor="let item of this.dataService.searchList"
+      *ngFor="let item of repos"
     ></app-result>
   </section>
   <section
@@ -17,7 +17,7 @@
     <app-result-tile
       [repo]="item"
       class="result-list__result-tile"
-      *ngFor="let item of this.dataService.searchList"
+      *ngFor="let item of repos"
     ></app-result-tile>
   </section>
 </main>
