@@ -1,14 +1,20 @@
 <main class="">
   <!-- <section class="result-list" *ngFor="let item of this.dataService.searchList"> -->
-  <div>{{ this.dataService.themeTile }}</div>
-  <section class="result-list container" *ngIf="!this.dataService.themeTile">
+  <div>{{ this.setThemeService.themeTile }}</div>
+  <section
+    class="result-list container"
+    *ngIf="!this.setThemeService.themeTile"
+  >
     <app-result
       [data]="item"
       class="result-list__result"
       *ngFor="let item of this.dataService.myList"
     ></app-result>
   </section>
-  <section class="result-list container" *ngIf="!!this.dataService.themeTile">
+  <section
+    class="result-list container"
+    *ngIf="!!this.setThemeService.themeTile"
+  >
     <app-result-tile
       [data]="item"
       class="result-list__result-tile"
@@ -16,5 +22,5 @@
     ></app-result-tile>
   </section>
 </main>
-<!-- *ngIf="!this.dataService.theme === 'result'" -->
+<!-- *ngIf="!this.setThemeService.theme === 'result'" -->
 <!-- *ngFor="let item of this.dataService.myList" -->

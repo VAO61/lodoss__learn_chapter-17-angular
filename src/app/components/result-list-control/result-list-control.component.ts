@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
+import { SetThemeService } from '../../services/set-theme.service';
 
 @Component({
   selector: 'app-result-list-control',
   templateUrl: './result-list-control.component.html',
   styleUrls: ['./result-list-control.component.scss'],
-  providers: [DataService]
+  providers: [SetThemeService]
 })
 export class ResultListControlComponent implements OnInit {
-  constructor(private dataService: DataService) {}
+  constructor(private setThemeService: SetThemeService) {}
 
   ngOnInit() {}
 }

@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 
-@Injectable()
+// @Injectable()
 export class DataService {
   searchList = [];
   myList = [
@@ -505,12 +505,4 @@ export class DataService {
       score: 41.406708
     }
   ];
-
-  themeTile = false;
-
-  toggleTheme() {
-    this.themeTile = !this.themeTile;
-    console.log(this.themeTile);
-  }
-  // theme: 'result-tile';
 }
