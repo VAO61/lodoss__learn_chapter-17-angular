@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+
 import { DataService } from '../../services/data.service';
 import { SetThemeService } from '../../services/set-theme.service';
 
-// import { Injectable } from '@angular/core';
-
-// @Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-result-list',
   templateUrl: './result-list.component.html',
   styleUrls: ['./result-list.component.scss'],
-  providers: [DataService, SetThemeService]
+  providers: []
 
   // changeDetection: ChangeDetectionStrategy.OnPush
 })

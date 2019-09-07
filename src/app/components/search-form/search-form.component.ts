@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
 import { GetDataService } from '../../services/get-data.service';
-// console.log(GetDataService);
 
 @Component({
   selector: 'app-search-form',

@@ -1,9 +1,12 @@
-import { DataService } from './data.service';
 import { Injectable } from '@angular/core';
-import axios from 'axios';
 import { Observable } from 'rxjs';
+import axios from 'axios';
 
-@Injectable()
+import { DataService } from './data.service';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class GetDataService {
   constructor(private dataService: DataService) {}
 
