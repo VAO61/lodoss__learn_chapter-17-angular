@@ -7,7 +7,7 @@
     <app-result
       [data]="item"
       class="result-list__result"
-      *ngFor="let item of this.dataService.myList"
+      *ngFor="let item of this.dataService.searchList"
     ></app-result>
   </section>
   <section
@@ -17,7 +17,7 @@
     <app-result-tile
       [data]="item"
       class="result-list__result-tile"
-      *ngFor="let item of this.dataService.myList"
+      *ngFor="let item of this.dataService.searchList"
     ></app-result-tile>
   </section>
 </main>
