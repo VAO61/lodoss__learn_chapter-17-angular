@@ -30,8 +30,20 @@
   </div>
 </div>
 <div class="result-tile__add-remove">
-  <button class="btn btn_sub-brand">Remove from list</button>
-  <button class="btn btn_brand">Add to list</button>
+  <button
+    (click)="this.dataService.addRemoveRepo(item)"
+    *ngIf="this.dataService.isMyListExists(item)"
+    class="btn btn_sub-brand"
+  >
+    Remove from list
+  </button>
+  <button
+    (click)="this.dataService.addRemoveRepo(item)"
+    *ngIf="!this.dataService.isMyListExists(item)"
+    class="btn btn_brand"
+  >
+    Add to list
+  </button>
   <!-- {isExists ? (
   <button type="sub-brand" onClick={removeFromMyList(item.id)}>
     Remove from list

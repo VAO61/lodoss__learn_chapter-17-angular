@@ -8,8 +8,17 @@ export class DataService {
   myList = [];
 
   addRemoveRepo(item) {
-    this.myList.push(item);
-    console.log(item);
-    console.log(this.myList);
+    const found = this.myList.find(i => i.id === item.id);
+    if (found) {
+      this.myList = this.myList.filter(i => i.id !== item.id);
+    } else {
+      this.myList = [...this.myList, item];
+    }
+    // console.log(item);
+    // console.log(this.myList);
+  }
+
+  isMyListExists(item) {
+    return !!this.myList.find(i => i.id === item.id);
   }
 }

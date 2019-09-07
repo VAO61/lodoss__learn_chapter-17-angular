@@ -2,7 +2,11 @@
   <!-- <btn active={{isExists}} onClick={{isExists ? removeFromMyList(item.id) : addToMyList(item)}} /> -->
   <button
     (click)="this.dataService.addRemoveRepo(item)"
-    class="btn checkbox"
+    [ngClass]="
+      this.dataService.isMyListExists(item)
+        ? 'btn checkbox checkbox_active'
+        : 'btn checkbox'
+    "
   ></button>
   <!-- [ngClass]="btn checkbox" -->
   <!-- <button class="btn checkbox"></button> -->
