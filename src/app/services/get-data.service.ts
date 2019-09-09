@@ -72,7 +72,7 @@ export class GetDataService {
       this.dataService.searchList = data.map(item => {
         return item;
       });
-      console.log(this.dataService.searchList);
+      // console.log(this.dataService.searchList);
     });
   }
 }
