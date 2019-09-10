@@ -1,0 +1,50 @@
+<!-- 
+https://material.angular.io/components/categories/forms
+-->
+
+<section class="search container">
+  <mat-form-field class="search__item">
+    <mat-label>Type</mat-label>
+    <mat-select
+      [(ngModel)]="selectedType"
+      (ngModelChange)="this.getDataService.typeValue($event)"
+    >
+      <mat-option
+        value="{{ t.value }}"
+        *ngFor="let t of this.getDataService.types"
+        >{{ t.value }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="search__item">
+    <mat-label>Language</mat-label>
+    <mat-select
+      [(ngModel)]="selectedLanguage"
+      (ngModelChange)="this.getDataService.languageValue($event)"
+    >
+      <mat-option
+        value="{{ l.value }}"
+        *ngFor="let l of this.getDataService.languages"
+        >{{ l.value }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="search__item search__input">
+    <input
+      matInput
+      placeholder="Type here for search"
+      (keyup)="this.getDataService.inputChanged($event)"
+    />
+  </mat-form-field>
+
+  <!-- (ngSubmit)="onSubmit()" -->
+  <button
+    class="search__submit btn btn_brand"
+    (click)="this.getDataService.pullRepos()"
+    [disabled]="this.getDataService.isDisableSearch()"
+  >
+    search
+  </button>
+</section>

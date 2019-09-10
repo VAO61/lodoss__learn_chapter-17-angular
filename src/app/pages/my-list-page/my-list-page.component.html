@@ -1,0 +1,23 @@
+<h1 class="container">My List</h1>
+
+<app-no-result-found
+  *ngIf="!this.dataService.myList.length"
+  class="container no-result-found"
+></app-no-result-found>
+
+<app-result-list-control
+  *ngIf="this.dataService.myList.length"
+></app-result-list-control>
+<app-result-list
+  *ngIf="this.dataService.myList.length"
+  [repos]="this.dataService.myList"
+></app-result-list>
+
+<!-- Чтобы не создавались лишние контейнеры. Angular, ты не перестаёшь бесить! -->
+
+<!-- <ng-template [ngIf]="!this.dataService.searchList.length" [ngIfElse]="resultList">
+  <app-no-result-found></app-no-result-found>
+</ng-template>
+<ng-template #resultList>
+  <app-result-list></app-result-list>
+</ng-template> -->

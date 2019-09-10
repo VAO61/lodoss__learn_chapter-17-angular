@@ -1,0 +1,22 @@
+<section class="result-list-control container">
+  <button
+    [ngClass]="
+      this.setThemeService.themeTile
+        ? 'btn result-list-control__item result-list-control__item_active'
+        : 'btn result-list-control__item'
+    "
+    (click)="this.setThemeService.toggleTheme()"
+  >
+    <svg-icon src="../../assets/img/icon-tile.svg"></svg-icon>
+  </button>
+  <button
+    [ngClass]="
+      this.setThemeService.themeTile
+        ? 'btn result-list-control__item'
+        : 'btn result-list-control__item result-list-control__item_active'
+    "
+    (click)="this.setThemeService.toggleTheme()"
+  >
+    <svg-icon src="../../assets/img/icon-list.svg"></svg-icon>
+  </button>
+</section>

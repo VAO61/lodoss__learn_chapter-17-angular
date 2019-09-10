@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@import './assets/scss/reset';
+@import './assets/scss/variables';
+@import './assets/scss/container';
+@import './assets/scss/link';
+@import './assets/scss/btn';
+@import './assets/scss/cheakbox';
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import './assets/scss/block/app';
+@import './assets/scss/block/result-details';
+@import './assets/scss/block/no-result-found';

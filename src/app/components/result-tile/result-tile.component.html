@@ -1,0 +1,54 @@
+<div class="result-tile__details result-details">
+  <p class="result-details__language">
+    {{ item.language }}
+  </p>
+  <div class="result-details__stars-container">
+    <svg-icon
+      class="result-details__icon"
+      src="../../assets/img/icon-star.svg"
+    ></svg-icon>
+    <!-- <img class="result-details__icon" src={IconStar} alt="icon star" /> -->
+    <p class="result-details__count">
+      {{ item.stargazers_count }}
+    </p>
+  </div>
+</div>
+<div class="result-tile__main">
+  <p class="result-tile__title">
+    <a href="{item.html_url}" class="lnk result-tile__link">
+      {{ item.full_name }}
+    </a>
+  </p>
+  <p class="result-tile__desc">
+    {{ item.description }}
+  </p>
+
+  <div class="result-tile__tags">
+    <span class="result-tile__tag" *ngFor="let tag of item.topics">
+      {{ tag }}
+    </span>
+  </div>
+</div>
+<div class="result-tile__add-remove">
+  <button
+    (click)="this.dataService.addRemoveRepo(item)"
+    *ngIf="this.dataService.isMyListExists(item)"
+    class="btn btn_sub-brand"
+  >
+    Remove from list
+  </button>
+  <button
+    (click)="this.dataService.addRemoveRepo(item)"
+    *ngIf="!this.dataService.isMyListExists(item)"
+    class="btn btn_brand"
+  >
+    Add to list
+  </button>
+  <!-- {isExists ? (
+  <button type="sub-brand" onClick={removeFromMyList(item.id)}>
+    Remove from list
+  </button>
+  ) : (
+  <button onClick={addToMyList(item)}>Add to list</button>
+  )} -->
+</div>

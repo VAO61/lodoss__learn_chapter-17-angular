@@ -1,0 +1,29 @@
+@import 'variables';
+
+.no-results {
+  min-width: 100%;
+  text-align: center;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
+  &__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title,
+  &__desc {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-brand;
+    font-weight: bold;
+  }
+}
